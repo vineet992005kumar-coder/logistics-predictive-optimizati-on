@@ -1,0 +1,127 @@
+{
+  "cv": [
+    {
+      "model": "Gradient Boosting",
+      "cv_rmse": 0.923,
+      "cv_rmse_std": 0.021,
+      "cv_r2": 0.515
+    },
+    {
+      "model": "Linear Regression",
+      "cv_rmse": 0.953,
+      "cv_rmse_std": 0.027,
+      "cv_r2": 0.483
+    },
+    {
+      "model": "Random Forest",
+      "cv_rmse": 0.976,
+      "cv_rmse_std": 0.026,
+      "cv_r2": 0.457
+    },
+    {
+      "model": "Decision Tree",
+      "cv_rmse": 0.977,
+      "cv_rmse_std": 0.026,
+      "cv_r2": 0.456
+    }
+  ],
+  "best_params": {
+    "subsample": 0.85,
+    "n_estimators": 300,
+    "min_samples_leaf": 1,
+    "max_depth": 2,
+    "learning_rate": 0.05
+  },
+  "test": [
+    {
+      "model": "Linear Regression",
+      "MAE": 0.727,
+      "RMSE": 0.953,
+      "R2": 0.465
+    },
+    {
+      "model": "Decision Tree",
+      "MAE": 0.736,
+      "RMSE": 0.967,
+      "R2": 0.449
+    },
+    {
+      "model": "Random Forest",
+      "MAE": 0.736,
+      "RMSE": 0.971,
+      "R2": 0.445
+    },
+    {
+      "model": "Gradient Boosting",
+      "MAE": 0.698,
+      "RMSE": 0.93,
+      "R2": 0.491
+    },
+    {
+      "model": "Gradient Boosting (tuned)",
+      "MAE": 0.695,
+      "RMSE": 0.927,
+      "R2": 0.494
+    }
+  ],
+  "baseline_mae": 1.0086939479166668,
+  "importance": {
+    "distance_km": 0.507,
+    "mode": 0.199,
+    "carrier": 0.146,
+    "is_peak": 0.072,
+    "hub": 0.053,
+    "month": 0.03,
+    "weight_kg": 0.001,
+    "weekday": 0.0
+  },
+  "cost_model_r2": 0.9994320451698233,
+  "mode_opt": {
+    "cost_before": 1349129.3145056302,
+    "cost_after": 895897.0604628383,
+    "saving_pct": 33.59442635851943,
+    "ontime_before": 95.08333333333333,
+    "ontime_after": 95.08333333333333,
+    "switched_pct": 11.083333333333334
+  },
+  "mode_share": {
+    "before": {
+      "Road": 63.3,
+      "Rail": 19.6,
+      "Air": 17.1
+    },
+    "after": {
+      "Road": 69.4,
+      "Rail": 24.6,
+      "Air": 6.0
+    }
+  },
+  "cost_by_mode": {
+    "before": {
+      "Road": 251177.0,
+      "Rail": 114799.0,
+      "Air": 983153.0
+    },
+    "after": {
+      "Road": 346466.0,
+      "Rail": 153158.0,
+      "Air": 396273.0
+    }
+  },
+  "carrier_opt": {
+    "days_before": 3.3296075914883363,
+    "days_after": 3.179943476615279,
+    "late_before": 4.916666666666666,
+    "late_after": 4.5,
+    "share_before": {
+      "FastShip": 37.5,
+      "QuickMove": 37.1,
+      "CityCourier": 25.4
+    },
+    "share_after": {
+      "FastShip": 45.0,
+      "QuickMove": 45.0,
+      "CityCourier": 10.0
+    }
+  }
+}
